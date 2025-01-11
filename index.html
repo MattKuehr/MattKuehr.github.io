@@ -67,6 +67,33 @@
         a.resume-link:hover {
             text-decoration: underline;
         }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+
     </style>
 </head>
 
@@ -104,9 +131,17 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Matt Kuehr. All rights reserved.</p>
-        <a class="resume-link" href="Matthew_Kuehr_CV.pdf" target="_blank">View My Resume</a>
+        <p>Matt Kuehr | Updated 11 January 2025</p>
+        <div class="social-links">
+            <a href="https://github.com/MattKuehr" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon"> My GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/matthew-kuehr-658103327/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon"> My LinkedIn
+            </a>
+        </div>
     </footer>
+    
 
 </body>
 
