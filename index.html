@@ -1,95 +1,113 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<!--This is a comment-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Kuehr | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
 
-<html>
-    <head>
-        <meta charset="utf-8"> <!--Setting unicode encoding standard-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>My First Website</title>
-        <style>
-            h1 {text-align: center;}
-        </style>
-    </head>
+        header {
+            background-color: #162447;
+            padding: 20px;
+            text-align: center;
+        }
 
-    <!--Declaring body and setting background color-->
-    <!--In practice, CSS should be used to set background rather than deprecated HTML arguments-->
-    <body bgcolor="#33FFDD">
-        <h1>My First Website</h1>
-        <h2>An HTML Playgroung</h2>
-        <h3>An HTML Playgroung</h3>
-        <h4>An HTML Playgroung</h4>
-        <h5>An HTML Playgroung</h5>
-        <h6>An HTML Playgroung</h6>
-        This is my very first website and I'm, <b>extremely excited!</b>
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #1f4068;
+            padding: 10px 0;
+        }
 
-        <p> <!--Can use "align=" argument to align text, but is better to do in CSS, not HTML source-->
-            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </b> <i>Maecenas justo augue, vehicula eget molestie ut, varius consectetur massa. </i> <br>
-            <u>Vivamus vel nisi at nisl molestie dictum.</u> Mauris faucibus risus eros, id suscipit nulla vehicula vel. Etiam sit amet varius erat. Nullam <br>
-            vestibulum nunc nec velit aliquam luctus. Quisque facilisis, ipsum suscipit efficitur egestas, nisi augue facilisis metus, sit amet tincidunt <br>
-            nibh dolor ac mi. Suspendisse blandit fringilla viverra. Proin pulvinar quam a convallis volutpat. Curabitur pellentesque dui consequat <br>
-            euismod condimentum. Etiam id consequat nibh. Nullam a volutpat lorem. Mauris vel egestas urna. Nunc placerat, massa sed ullamcorper <br>
-            dignissim, ipsum leo aliquam eros, sed luctus tortor diam quis sapien. Morbi ut nibh eu nunc eleifend hendrerit non id lectus. <hr>
-        </p>
+        .navbar a {
+            margin: 0 15px;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-        <a href="https://en.wikipedia.org/wiki/Mathematics" target="_blank">Here is a link to the math wikipedia article!</a> <br>
-        
-        <img src="FS_1.png" width="400" height="240" style="border:4px solid #000000;">
-        
-        <!--Unordered list-->
-        <ul>
-            <li>apples\
-                <!--Here we nested an unordered list inside an unordered list-->
-                <ul>
-                    <li>granny smith</li>
-                    <li>macintosh</li>
-                </ul>
-            </li>
-            <li>oranges</li>
-            <li>pears</li>
-        </ul>
+        .navbar a:hover {
+            color: #00bcd4;
+        }
 
-        <!--Ordered list-->
-        <ol>
-            <li>Food</li>
-            <li>Books</li>
-            <li>Sleep</li>
-        </ol>
+        main {
+            padding: 20px;
+        }
 
-        <a href="Matthew_Kuehr_CV.pdf" target="_blank">Click here to view my resume!</a> <br> <br>
+        section#about-me {
+            background-color: #1b1b32;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
 
-        <!--Declaring a table-->
-        <!--To actually give the table a border, use CSS method instead of deprecated border argument-->
-        <table border="5" cellpadding="10" cellspacing="0">
-            <tr>
-                <th colspan="2">Class</th> <!--Set column span to 2-->
-                <th>Year</th>
-                <th>Semester</th>
-                <th colspan="2">Grade</th> <!--Set column span to 2-->
-            </tr>
-            <tr>
-                <td rowspan="3">Calculus</td> <!--Set rowspan to 3, to nest Cal 1 Cal 2 and Cal 3 under calculus-->
-                <td>Cal 1</td>
-                <td>2022</td>
-                <td>Fall</td>
-                <td>A</td>
-                <td>Credits: 4</td>
-            </tr>
-            <tr>
-                <td>Cal 2</td>
-                <td>2023</td>
-                <td>Spring</td>
-                <td>A</td>
-                <td>Credits: 4</td>
-            </tr>
-            <tr>
-                <td>Cal 3</td>
-                <td>2023</td>
-                <td>Fall</td>
-                <td>A</td>
-                <td>Credits: 4</td>
-            </tr>
-        </table>
-    
-    </body>
+        footer {
+            background-color: #162447;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a.resume-link {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        a.resume-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Matt Kuehr | Junior Applied Mathematics Student at Auburn University</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="#">Research Experience</a>
+        <a href="#">Relevant Coursework</a>
+        <a href="#">Projects and Coding</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>My name is Matt Kuehr and I am a junior studying applied mathematics at Auburn University. My areas of academic interest are
+                data science, machine learning, computational mathematics and mathematical modeling. 
+            </p>
+            <h2>Certificate in Artificial Intelligence Engineering</h2>
+            <p>Alongside my bachelor of science in applied mathematics, I will also graduate with a certificate in Aritifical Intelligence Engineering 
+                through the Samuel Ginn College of Engineering to complement my background in formal mathematics.
+            </p>
+            <h2>Masters of Data Science and Engineering</h2>
+            <p>I have been accepted to Auburn University's accelerated bachelor to masters program in Data Science and Engineering. My senior year I will
+                take three graduate level courses in statistics and data science towards this degree. Upon my graduation in 2026 I will enroll at Auburn 
+                for another academic year as a graduate student to fulfill the remaining credits and receive my masters in Data Science and Engineering.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Matt Kuehr. All rights reserved.</p>
+        <a class="resume-link" href="Matthew_Kuehr_CV.pdf" target="_blank">View My Resume</a>
+    </footer>
+
+</body>
+
 </html>
