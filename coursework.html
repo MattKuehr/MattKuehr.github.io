@@ -12,6 +12,9 @@
             padding: 0;
             background-color: #1a1a2e;
             color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -27,6 +30,7 @@
             background-color: #1b1b32;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex-grow: 1;
         }
 
         h1 {
@@ -48,11 +52,37 @@
 
         footer {
             background-color: #162447;
+            color: #e0e0e0;
             text-align: center;
             padding: 10px;
-            position: relative;
-            bottom: 0;
+            font-size: 14px;
             width: 100%;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links {
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
         }
 
         a.nav-link {
@@ -96,6 +126,9 @@
         </div>
     </footer>
 
+</body>
+
+</html>
 </body>
 
 </html>
