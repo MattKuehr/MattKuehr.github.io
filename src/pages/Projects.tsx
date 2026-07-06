@@ -1,8 +1,11 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { ExternalLink } from 'lucide-react'
-import { projects } from '../data/projects'
+import { projects, type Project } from '../data/projects'
+import ProjectModal from '../components/ProjectModal'
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+
   return (
     <div className="max-w-2xl">
       <div className="flex items-start justify-between mb-4">
@@ -25,10 +28,11 @@ export default function Projects() {
       </p>
       <div className="grid grid-cols-2 gap-6">
         {projects.map((project) => (
-          <Link
+          <button
             key={project.slug}
-            to={project.slug}
-            className="flex flex-col rounded-xl border border-gray-200 overflow-hidden transition-all duration-200 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300"
+            type="button"
+            onClick={() => setSelectedProject(project)}
+            className="flex flex-col text-left rounded-xl border border-gray-200 overflow-hidden transition-all duration-200 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300"
           >
             <div className="aspect-square bg-gray-100 overflow-hidden">
               {project.image && (
@@ -39,9 +43,13 @@ export default function Projects() {
               <h3 className="text-base font-semibold text-gray-900 mb-1">{project.title}</h3>
               <p className="text-sm text-gray-500">{project.summary}</p>
             </div>
-          </Link>
+          </button>
         ))}
       </div>
+
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </div>
   )
 }

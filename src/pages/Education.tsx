@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { Copy, Check, ExternalLink } from 'lucide-react'
+import auburnLogo from '../assets/auburn-logo.svg'
 
 interface Degree {
   label: string
   institution: string
+  institutionLogo?: string
   location: string
   duration: string
   dateLabel: string
@@ -17,6 +19,7 @@ const degrees: Degree[] = [
   {
     label: 'Master of Science | Data Science',
     institution: 'Auburn University',
+    institutionLogo: auburnLogo,
     location: 'Auburn, AL',
     duration: 'Aug 2026 – May 2027 (Expected)',
     dateLabel: 'August 2026',
@@ -25,6 +28,7 @@ const degrees: Degree[] = [
   {
     label: 'Bachelor of Science | Applied Mathematics',
     institution: 'Auburn University',
+    institutionLogo: auburnLogo,
     location: 'Auburn, AL',
     duration: 'Aug 2022 – May 2026',
     dateLabel: 'May 2026',
@@ -36,6 +40,7 @@ const degrees: Degree[] = [
   {
     label: 'Undergraduate Certificate | Artificial Intelligence Engineering',
     institution: 'Auburn University',
+    institutionLogo: auburnLogo,
     location: 'Auburn, AL',
     duration: 'Jan 2025 – May 2026',
     dateLabel: 'May 2026',
@@ -107,7 +112,12 @@ function DegreeBlock({ degree, isLast }: { degree: Degree; isLast: boolean }) {
       {/* Card */}
       <div className={`flex-1 ${!isLast ? 'mb-10' : ''}`}>
         <div className="border border-gray-200 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-1">{degree.label}</h3>
+          <div className="flex items-start justify-between gap-3 mb-1">
+            <h3 className="text-xl font-bold text-gray-900">{degree.label}</h3>
+            {degree.institutionLogo && (
+              <img src={degree.institutionLogo} alt="" className="h-7 w-auto flex-shrink-0" />
+            )}
+          </div>
           <div className="text-sm font-medium text-gray-500 mb-1">{degree.institution}</div>
           <div className="flex gap-3 text-sm text-gray-400 mb-3">
             <span>{degree.location}</span>

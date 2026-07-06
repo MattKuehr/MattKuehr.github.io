@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import hadrianLogo from '../assets/hadrian-logo.png'
 
 type Tab = 'projects' | 'skills'
 
@@ -6,6 +7,7 @@ interface Internship {
   season: string
   role: string
   company: string
+  companyLogo?: string
   location: string
   duration: string
   projects: string[]
@@ -17,19 +19,24 @@ const internships: Internship[] = [
     season: 'Summer 2026',
     role: 'Machine Learning Engineer Intern',
     company: 'Hadrian Automation',
+    companyLogo: hadrianLogo,
     location: 'Torrance, CA',
-    duration: 'May 2026 – Aug 2026',
-    projects: ['Project one description', 'Project two description'],
-    skills: ['Skill one', 'Skill two', 'Skill three'],
+    duration: 'May 2026 – Present',
+    projects: ['I developed an end-to-end stratification routine for an OCR dataset of content from engineering drawings. To validate how the stratification decisions separated data samples, I created an embedding space visualization tool using uniform manifold approximation and projection (UMAP). In service of that tool, I deployed an endpoint on AWS for image embedding using a vision language model (VLM) encoder.'],
+    skills: ['Python', 'TypeScript', 'SQL', 'Bash', 'Docker', 'PyTorch', 'Hugging Face'],
   },
   {
     season: 'Summer 2025',
     role: 'Machine Learning Engineer Intern',
     company: 'Hadrian Automation',
+    companyLogo: hadrianLogo,
     location: 'Torrance, CA',
     duration: 'May 2025 – Aug 2025',
-    projects: ['Project one description', 'Project two description'],
-    skills: ['Skill one', 'Skill two', 'Skill three'],
+    projects: [
+      'I built an image segmentation pipeline using OpenCV to detect title blocks in engineering drawings. I applied this pipeline to efficiently curate a dataset of engineering title block images which I used for downstream tasks.',
+      'I used low-rank adaptation (LoRA) and supervised fine-tuning (SFT) to train a vision language model (VLM) for parsing and extracting key information from the dataset of title block crops I curated. I used Hugging Face\'s PEFT framework to create an SFT routine with LoRA and used AWS SageMaker to train the model and deploy it for inference.'
+    ],
+    skills: ['Python', 'OpenCV', 'PyTorch', 'Hugging Face', 'LoRA', 'AWS'],
   },
 ]
 
@@ -58,7 +65,12 @@ function InternshipBlock({
       {/* Card */}
       <div className={`flex-1 ${!isLast ? 'mb-10' : ''}`}>
         <div className="border border-gray-200 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-1">{internship.role}</h3>
+          <div className="flex items-start justify-between gap-3 mb-1">
+            <h3 className="text-xl font-bold text-gray-900">{internship.role}</h3>
+            {internship.companyLogo && (
+              <img src={internship.companyLogo} alt="" className="w-6 h-6 rounded-sm flex-shrink-0" />
+            )}
+          </div>
           <div className="text-sm font-medium text-gray-500 mb-1">{internship.company}</div>
           <div className="flex gap-3 text-sm text-gray-400 mb-5">
             <span>{internship.location}</span>

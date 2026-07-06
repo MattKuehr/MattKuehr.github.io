@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 const navItems = [
   { label: 'Home', to: '/' },
   { label: 'Education', to: '/education' },
-  { label: 'Awards', to: '/awards' },
+  { label: 'Awards', to: '/awards', hidden: true },
   { label: 'Experience', to: '/experience' },
   { label: 'Research', to: '/research' },
   { label: 'Projects', to: '/projects' },
@@ -17,7 +17,7 @@ export default function Sidebar() {
         <h1 className="text-lg font-semibold text-gray-900">Matt Kuehr</h1>
       </div>
       <nav className="flex flex-col gap-1">
-        {navItems.map(({ label, to }) => (
+        {navItems.filter((item) => !item.hidden).map(({ label, to }) => (
           <NavLink
             key={to}
             to={to}
