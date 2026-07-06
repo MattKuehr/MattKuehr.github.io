@@ -38,7 +38,7 @@ export default function Home() {
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-400">About Me</h3>
           <a
-            href="/Matt_Kuehr_Resume.pdf"
+            href={`${import.meta.env.BASE_URL}Matt_Kuehr_Resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-1.5 text-sm font-semibold text-white bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors"

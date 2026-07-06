@@ -26,7 +26,7 @@ const groups: ResearchGroup[] = [
     duration: 'Aug 2025 – Dec 2025',
     summary: 'I was awarded an undergraduate research fellowship for the Fall semester of the 2025 academic year. During that semester, I researched photonic crystals under the mentorship of Dr. Junshan Lin in the Department of Mathematics and Statistics.',
     details: 'My research focused on calculating and detecting the band structure of one dimensional non-Hermitian topological photonic crystals. I implemented a transfer-matrix-based method for calculating the band structure of a photonic crystal. The method used NumPy to calculate the eigenvalues using the Schur decomposition and SciPy to apply Newton\'s method for finding complex roots. Later, I optimized this band calculation algorithm for large jobs using just-in-time compilation and parallel computing with Numba. I designed and implemented an algorithm for unsupervised band detection and assignment which utilized KD-Trees and various heuristics to accurately assign the points calculated with the aforementioned method to the correct photonic band.\n\nI presented my work at Auburn\'s Undergraduate Research Symposium in March of 2026. You can see my slideshow here:',
-    slidesUrl: '/URS_Presentation_Matt_Kuehr.pdf',
+    slidesUrl: `${import.meta.env.BASE_URL}URS_Presentation_Matt_Kuehr.pdf`,
     githubUrl: 'https://github.com/MattKuehr/PhotonicResearch',
   },
 ]

@@ -118,7 +118,7 @@ export default function Experience() {
         Here is a quick summary of my internship experience. For more insight, check out my résumé.
       </p>
       <a
-        href="/Matt_Kuehr_Resume.pdf"
+        href={`${import.meta.env.BASE_URL}Matt_Kuehr_Resume.pdf`}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block px-4 py-1.5 text-sm font-semibold text-white bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors mb-10"
