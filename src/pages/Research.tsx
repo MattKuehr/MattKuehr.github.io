@@ -33,7 +33,7 @@ const groups: ResearchGroup[] = [
 
 export default function Research() {
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-3xl mx-auto">
       <h2 className="text-3xl font-bold text-gray-900 mb-10">Research</h2>
       <div className="flex flex-col gap-6">
         {groups.map((group) => (

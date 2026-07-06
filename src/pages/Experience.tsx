@@ -50,9 +50,9 @@ function InternshipBlock({
   const [activeTab, setActiveTab] = useState<Tab>('projects')
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-3 sm:gap-6">
       {/* Date */}
-      <div className="w-28 text-right text-sm text-gray-400 font-medium pt-2 flex-shrink-0">
+      <div className="w-14 sm:w-28 text-right text-xs sm:text-sm text-gray-400 font-medium pt-2 flex-shrink-0">
         {internship.season}
       </div>
 
@@ -112,7 +112,7 @@ function InternshipBlock({
 
 export default function Experience() {
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-2xl mx-auto">
       <h2 className="text-3xl font-bold text-gray-900 mb-4">Experience</h2>
       <p className="text-gray-500 leading-relaxed mb-4">
         Here is a quick summary of my internship experience. For more insight, check out my résumé.

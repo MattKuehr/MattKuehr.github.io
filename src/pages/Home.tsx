@@ -13,16 +13,16 @@ const summaryCards = [
 
 export default function Home() {
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-2xl mx-auto">
       {/* Hero */}
-      <section className="flex items-center gap-8 mb-14">
+      <section className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 text-center sm:text-left mb-14">
         <img
           src={profileImg}
           alt="Matt Kuehr"
-          className="w-36 h-36 rounded-xl object-cover object-top border-2 border-gray-300 shadow-sm flex-shrink-0"
+          className="w-28 h-28 sm:w-36 sm:h-36 rounded-xl object-cover object-top border-2 border-gray-300 shadow-sm flex-shrink-0"
         />
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-3">Hi, I'm Matt Kuehr</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Hi, I'm Matt Kuehr</h2>
           <p className="text-lg text-gray-500 leading-relaxed">
             Master's student in Data Science @{' '}
             <a href="https://www.auburn.edu" target="_blank" rel="noopener noreferrer" className="text-gray-700 underline hover:text-gray-900">Auburn University</a>
@@ -69,7 +69,7 @@ export default function Home() {
             <Link
               key={to}
               to={to}
-              className="block basis-[calc((100%_-_2rem)/3)] p-5 rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+              className="block w-full sm:basis-[calc((100%_-_1rem)/2)] md:basis-[calc((100%_-_2rem)/3)] p-5 rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
             >
               <div className="text-base font-semibold text-gray-900 mb-1">{label}</div>
               <div className="text-sm text-gray-500">{description}</div>

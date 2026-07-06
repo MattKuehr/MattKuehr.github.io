@@ -61,7 +61,7 @@ function CredentialSection({ credentialId }: { credentialId: string }) {
 
   return (
     <div className="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-2">
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         <a
           href="https://ediploma.auburn.edu/validate/"
           target="_blank"
@@ -97,9 +97,9 @@ function CredentialSection({ credentialId }: { credentialId: string }) {
 
 function DegreeBlock({ degree, isLast }: { degree: Degree; isLast: boolean }) {
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-3 sm:gap-6">
       {/* Date */}
-      <div className="w-28 text-right text-sm text-gray-400 font-medium pt-2 flex-shrink-0">
+      <div className="w-14 sm:w-28 text-right text-xs sm:text-sm text-gray-400 font-medium pt-2 flex-shrink-0">
         {degree.dateLabel}
       </div>
 
@@ -146,7 +146,7 @@ function DegreeBlock({ degree, isLast }: { degree: Degree; isLast: boolean }) {
 
 export default function Education() {
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-2xl mx-auto">
       <h2 className="text-3xl font-bold text-gray-900 mb-10">Education</h2>
       <div className="flex flex-col">
         {degrees.map((degree, i) => (

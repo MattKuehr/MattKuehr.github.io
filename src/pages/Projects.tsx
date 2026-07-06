@@ -7,7 +7,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-2xl mx-auto">
       <div className="flex items-start justify-between mb-4">
         <h2 className="text-3xl font-bold text-gray-900">Projects</h2>
         <a
@@ -26,7 +26,7 @@ export default function Projects() {
       <p className="text-gray-500 leading-relaxed mb-10">
         A mix of some of my projects. Click the tiles to read more about each one.
       </p>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projects.map((project) => (
           <button
             key={project.slug}
