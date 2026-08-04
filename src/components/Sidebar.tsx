@@ -5,9 +5,9 @@ import { Menu, X } from 'lucide-react'
 const navItems = [
   { label: 'Home', to: '/' },
   { label: 'Education', to: '/education' },
-  { label: 'Awards', to: '/awards', hidden: true },
   { label: 'Experience', to: '/experience' },
   { label: 'Research', to: '/research' },
+  { label: 'Awards', to: '/awards' },
   { label: 'Projects', to: '/projects' },
   { label: 'Contact', to: '/contact' },
 ]
@@ -15,7 +15,7 @@ const navItems = [
 export default function Sidebar() {
   const [open, setOpen] = useState(false)
 
-  const links = navItems.filter((item) => !item.hidden)
+  const links = navItems
 
   return (
     <>

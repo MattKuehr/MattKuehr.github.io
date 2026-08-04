@@ -4,9 +4,9 @@ import profileImg from '../assets/mattkuehr.png'
 
 const summaryCards = [
   { label: 'Education', to: '/education', description: 'My academic background and degrees.' },
-  { label: 'Awards', to: '/awards', description: 'Awards and recognitions.', hidden: true },
   { label: 'Experience', to: '/experience', description: 'Internships and professional experience.' },
   { label: 'Research', to: '/research', description: 'Academic research and papers.' },
+  { label: 'Awards', to: '/awards', description: 'Awards and recognitions.' },
   { label: 'Projects', to: '/projects', description: 'A catalogue of some of my projects.' },
   { label: 'Contact', to: '/contact', description: 'Get in touch with me.' },
 ]
@@ -65,7 +65,7 @@ export default function Home() {
       <section>
         <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-4 text-center">See more about my work and experience</h3>
         <div className="flex flex-wrap justify-center gap-4">
-          {summaryCards.filter((card) => !card.hidden).map(({ label, to, description }) => (
+          {summaryCards.map(({ label, to, description }) => (
             <Link
               key={to}
               to={to}
