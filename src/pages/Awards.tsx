@@ -6,7 +6,7 @@ export default function Awards() {
     <div className="max-w-2xl mx-auto">
       <h2 className="text-3xl font-bold text-gray-900 mb-10">Awards & Accomplishments</h2>
       <div className="border border-gray-200 rounded-xl p-6 flex flex-col items-center">
-        <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">2026 Deans Medalist - Department of Mathematics and Statistics</h3>
+        <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">2026 Dean's Medalist - Department of Mathematics and Statistics</h3>
         <img
           src={awardImg}
           alt="Matt Kuehr award"
